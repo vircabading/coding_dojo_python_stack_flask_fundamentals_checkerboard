@@ -1,5 +1,5 @@
 # /////////////////////////////////////////////////////////////////////
-# Subj: Coding Dojo > Python > Flask > Fundamentals: Playground
+# Subj: Coding Dojo > Python > Flask > Fundamentals: Checkerboard
 # By: Virgilio D. Cabading Jr.  Created: October 27, 2021
 # /////////////////////////////////////////////////////////////////////
 
