@@ -17,7 +17,7 @@ def index_vnum(vnum):
     return render_template('index.html', hnum=8, vnum=vnum, lcolor='red', dcolor='black')
 
 # **** /x/y *************************************************************
-@app.route('/<int:hnum>/<int:vnum>')                             # The "@" decorator associates this route with the function immediately following
+@app.route('/<int:hnum>/<int:vnum>')                    # The "@" decorator associates this route with the function immediately following
 def index_xnum_vnum(hnum,vnum):
     return render_template('index.html', hnum=hnum, vnum=vnum, lcolor='red', dcolor='black')
 
