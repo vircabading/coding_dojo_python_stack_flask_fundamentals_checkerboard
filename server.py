@@ -11,12 +11,15 @@ app = Flask(__name__)                                   # Create a new instance 
 def index():
     return render_template('index.html', hnum=8, vnum=8, lcolor='red', dcolor='black')
 
-# **** /x *************************************************************
+# **** /y *************************************************************
 @app.route('/<int:vnum>')                             # The "@" decorator associates this route with the function immediately following
 def index_vnum(vnum):
     return render_template('index.html', hnum=8, vnum=vnum, lcolor='red', dcolor='black')
 
-
+# **** /x/y *************************************************************
+@app.route('/<int:hnum>/<int:vnum>')                             # The "@" decorator associates this route with the function immediately following
+def index_xnum_vnum(hnum,vnum):
+    return render_template('index.html', hnum=hnum, vnum=vnum, lcolor='red', dcolor='black')
 
 # **** Handle invalid routes ******************************************
 @app.errorhandler(404) 
