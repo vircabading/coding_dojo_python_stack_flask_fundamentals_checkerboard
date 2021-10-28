@@ -9,22 +9,14 @@ app = Flask(__name__)                                   # Create a new instance 
 # **** Default App Route **********************************************
 @app.route('/')                                         # The "@" decorator associates this route with the function immediately following
 def index():
-    return render_template('play_iterations_color.html', iterations=0, color='dodgerblue')
+    return render_template('index.html', hnum=8, vnum=8, lcolor='red', dcolor='black')
 
-# **** Play App Route *************************************************
-@app.route('/play')
-def play():
-    return render_template('play_iterations_color.html', iterations=3, color='dodgerblue')
+# **** /x *************************************************************
+@app.route('/<int:vnum>')                             # The "@" decorator associates this route with the function immediately following
+def index_vnum(vnum):
+    return render_template('index.html', hnum=8, vnum=vnum, lcolor='red', dcolor='black')
 
-# **** Play Iterations App Route *************************************************
-@app.route('/play/<int:iterations>')
-def play_iterations(iterations):
-    return render_template('play_iterations_color.html', iterations=iterations, color='dodgerblue')
 
-# **** Play Iterations Color App Route *************************************************
-@app.route('/play/<int:iterations>/<string:color>')
-def play_iterations_color(iterations,color):
-    return render_template('play_iterations_color.html', iterations=iterations, color=color)
 
 # **** Handle invalid routes ******************************************
 @app.errorhandler(404) 

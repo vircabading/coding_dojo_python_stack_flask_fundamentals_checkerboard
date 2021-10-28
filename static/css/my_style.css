@@ -1,0 +1,13 @@
+/*  //////////////////////////////////////////////////
+    Subj:   Coding Dojo > Web Fundamentals > HTML/CSS/JS
+            Easy Bay
+    By:     Virgilio D. Cabading Jr.    October 20, 2021
+    ////////////////////////////////////////////////// */
+
+.main_container {
+    background-color: yellow;
+}
+
+h1 {
+    font-size: 5rem;
+}

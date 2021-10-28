@@ -4,133 +4,29 @@
     By:     Virgilio D. Cabading Jr.    October 20, 2021
     ////////////////////////////////////////////////// */
 
-/* //// TITLE BAR //////////////////////////////////// */
-
-.title_bar {
-    padding: 0px 10px;
-    margin: 10px 0px;
-}
-
-.title_bar>h1 {
+.title {
+    font-size: 3rem;
     font-weight: bold;
-    font-size: 3rem;
-}
-
-.title_bar>img {
-    height: 50px;
-}
-
-.title_bar>button {
-    font-size: 20px;
-}
-
-.search_container {
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    padding: 0px 20px;
-    border-radius: 25px;
-}
-
-.search_container>input {
-    font-size: 20px;
-}
-
-.search_container>img {
-    height: 25px;
-    width: auto;
-}
-
-/* //// LINKS BAR //////////////////////////////////// */
-.links_bar {
-    border-style: solid;
-    border-width: 0px 0px 2px 0px;
-    border-color: black;
-    padding: 10px 0px;
-}
-
-/* //// MESSAGE BAR ////////////////////////////////// */
-.message_bar {
-    padding: 20px 0px;
-    font-size: 3rem;
-}
-
-/* //// MAIN CONTENT ///////////////////////////////// */
-
-/* **** Left Column ********************************** */
-
-.left_column {
-    background-color: #00C46B;
-    color: white;
-    font-size: 1.7rem;
-    margin-right: 10px;
-}
-
-.left_column>div>p {
+    padding: 20px;
+    /* background-color: red; */
+    border-radius: 10px;
+    margin: 10px;
     text-align: center;
 }
 
-#main_succulent {
-    height: auto;
+.whole-board {
     width: inherit;
 }
 
-/* **** Right Column ********************************* */
-.right_column {
-    height: inherit;
-    margin-left: 10px;
-    font-size: 1.7rem;
-}
-
-.right_column>img {
-    width: 100%;
-    height: auto;
-}
-
-.right_column>.container {
-    background-color: #00C46B;
-    width: 100%;
-    color: white;
-    font-size: 1.7ren;
-    margin-top: 10px;
-}
-
-/* //// PICTURE BAR ////////////////////////////////// */
-.picture_bar {
-    background-color: lightslategray;
-    height: 200px;
-    margin-top: 10px;
-    margin-bottom: 50px;
-}
-
-.picture_bar>.flex_down>img {
-    height: 100px;
-    width: auto;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-/* //// POP UP BAR /////////////////////////////////// */
-.pop_up_bar {
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    background-color: white;
-    padding: 20px;
-    position: fixed;
-    top: 80%;
-    width: inherit;
-}
-
-.pop_up_bar>img {
+.box {
     height: 50px;
+    width: 50px;
 }
 
-.pop_up_bar>button {
-    background-color: #00C46B;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    border-color: black;
-    box-shadow: 5px 5px 4px black;
+.light-box {
+    background-color: red;
+}
+
+.dark-box {
+    background-color: black;
 }

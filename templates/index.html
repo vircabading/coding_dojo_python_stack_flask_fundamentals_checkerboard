@@ -10,20 +10,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <!-- linking a css style sheet -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/css_lib.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <!-- linking a javascript file -->
-    
-    <title>Playground</title>
+    <title>Checkerboard</title>
 </head>
 
 <!--//// BODY ////////////////////////////////////////-->
 <body>
-    <div class="main-container">
-        <h1>Welcome!</h1>
-    </div>
+    <div class="main-container container flex-down">
+        <h1 class="title" style="color:lcolor background-color:dcolor">*** Checkboard *** </h1>
+        {% for x in range(vnum) %}
+            <div class="whole-board container flex-down justify-center align-center">
+                <div class="row container flex-right justify-center align-center">
+                    {% for y in range(hnum) %}
+                        {% if x%2 == 0 %}
+                            {% if y%2 == 0 %}
+                                <div class="box dark-box" style="background-color: {{dcolor}}"></div>
+                            {% endif%}
+                            {% if y%2 != 0 %}
+                                <div class="box light-box" style="background-color: {{lcolor}}"></div>
+                            {% endif%}
+                        {% endif %}
+                        {% if x%2 != 0 %}
+                            {% if y%2 != 0 %}
+                                <div class="box dark-box" style="background-color: {{dcolor}}"></div>
+                            {% endif%}
+                            {% if y%2 == 0 %}
+                                <div class="box light-box" style="background-color: {{lcolor}}"></div>
+                            {% endif%}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
 
     <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
