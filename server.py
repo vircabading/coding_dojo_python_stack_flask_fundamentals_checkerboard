@@ -21,6 +21,11 @@ def index_vnum(vnum):
 def index_xnum_vnum(hnum,vnum):
     return render_template('index.html', hnum=hnum, vnum=vnum, lcolor='red', dcolor='black')
 
+# **** /x/y/lcolor/dcolot ***********************************************
+@app.route('/<int:hnum>/<int:vnum>/<string:lcolor>/<string:dcolor>')                    # The "@" decorator associates this route with the function immediately following
+def index_xnum_vnum(hnum,vnum):
+    return render_template('index.html', hnum=hnum, vnum=vnum, lcolor=lcolor, dcolor=dcolor)
+
 # **** Handle invalid routes ******************************************
 @app.errorhandler(404) 
 def invalid_route(e): 
